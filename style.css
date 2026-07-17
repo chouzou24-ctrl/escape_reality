@@ -1,0 +1,1095 @@
+/* ======================================
+RESET
+====================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+background: #060816;
+color: #ffffff;
+font-family: 'Poppins', sans-serif;
+overflow-x: hidden;
+}
+
+/* ======================================
+FOND ÉTOILÉ
+====================================== */
+
+body::before {
+content: "";
+position: fixed;
+inset: 0;
+
+```
+background-image:
+    radial-gradient(white 1px, transparent 1px),
+    radial-gradient(white 1px, transparent 1px);
+
+background-size: 80px 80px, 130px 130px;
+background-position: 0 0, 40px 60px;
+
+opacity: 0.25;
+pointer-events: none;
+z-index: -2;
+```
+
+}
+
+/* ======================================
+ÉTOILES
+====================================== */
+
+#stars,
+#shootingStars {
+position: fixed;
+inset: 0;
+pointer-events: none;
+z-index: -1;
+}
+
+/* ======================================
+TYPOGRAPHIE
+====================================== */
+
+h1,
+h2,
+h3 {
+font-family: 'Cormorant Garamond', serif;
+font-weight: 700;
+}
+
+p {
+line-height: 1.8;
+}
+
+/* ======================================
+BOUTONS
+====================================== */
+
+button,
+.continue-btn {
+display: inline-block;
+
+```
+margin-top: 30px;
+padding: 15px 30px;
+
+border: 1px solid rgba(255, 255, 255, 0.4);
+border-radius: 50px;
+
+background: rgba(255, 255, 255, 0.08);
+color: white;
+
+font-family: 'Poppins', sans-serif;
+font-size: 15px;
+
+cursor: pointer;
+text-decoration: none;
+
+transition: 0.4s ease;
+```
+
+}
+
+button:hover,
+.continue-btn:hover {
+background: rgba(255, 255, 255, 0.2);
+transform: translateY(-4px);
+box-shadow: 0 0 25px rgba(255, 255, 255, 0.25);
+}
+
+/* ======================================
+INTRO
+====================================== */
+
+#intro {
+min-height: 100vh;
+
+```
+display: flex;
+justify-content: center;
+align-items: center;
+
+text-align: center;
+padding: 40px;
+```
+
+}
+
+.intro-box {
+max-width: 700px;
+animation: fadeIn 2s ease;
+}
+
+.intro-box h3 {
+font-size: 28px;
+margin-bottom: 10px;
+}
+
+.intro-box h1 {
+font-size: clamp(60px, 10vw, 130px);
+margin-bottom: 25px;
+}
+
+.intro-box p {
+max-width: 550px;
+margin: auto;
+color: #d8d8e5;
+}
+
+/* ======================================
+WELCOME
+====================================== */
+
+#welcome {
+min-height: 100vh;
+
+```
+display: flex;
+justify-content: center;
+align-items: center;
+
+padding: 40px;
+text-align: center;
+```
+
+}
+
+.welcome-card {
+max-width: 700px;
+padding: 50px;
+
+```
+background: rgba(255, 255, 255, 0.04);
+border: 1px solid rgba(255, 255, 255, 0.1);
+
+border-radius: 25px;
+
+backdrop-filter: blur(10px);
+```
+
+}
+
+.welcome-card h2 {
+font-size: 45px;
+margin-bottom: 30px;
+}
+
+.welcome-card p {
+margin: 20px 0;
+color: #d8d8e5;
+}
+
+.highlight {
+color: white !important;
+font-size: 20px;
+}
+
+/* ======================================
+PAGE INTRO
+====================================== */
+
+.page-intro {
+min-height: 45vh;
+
+```
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+text-align: center;
+padding: 50px 25px;
+```
+
+}
+
+.page-intro h1 {
+font-size: clamp(45px, 8vw, 90px);
+margin-bottom: 25px;
+}
+
+.page-intro p {
+max-width: 650px;
+color: #d8d8e5;
+margin: 10px auto;
+}
+
+/* ======================================
+GALERIE PHOTOS
+====================================== */
+
+#gallery {
+padding: 60px 8%;
+}
+
+.gallery-grid {
+display: grid;
+
+```
+grid-template-columns:
+    repeat(auto-fit, minmax(260px, 1fr));
+
+gap: 30px;
+
+max-width: 1400px;
+margin: auto;
+```
+
+}
+
+.photo-card {
+padding: 15px;
+
+```
+background: rgba(255, 255, 255, 0.05);
+
+border: 1px solid rgba(255, 255, 255, 0.1);
+
+border-radius: 18px;
+
+transition: 0.5s ease;
+```
+
+}
+
+.photo-card:hover {
+transform: translateY(-10px) rotate(1deg);
+
+```
+box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.5),
+    0 0 25px rgba(255, 255, 255, 0.08);
+```
+
+}
+
+.photo-card img {
+    width: 100%;
+    height: auto;
+
+    display: block;
+
+    border-radius: 12px;
+
+    object-fit: contain;
+}
+
+.photo-card span {
+display: block;
+
+```
+padding: 20px 10px 10px;
+
+text-align: center;
+
+color: #dedee8;
+line-height: 1.6;
+```
+
+}
+
+/* ======================================
+VIDÉOS
+====================================== */
+
+#videos {
+padding: 100px 8%;
+text-align: center;
+}
+
+#videos h2 {
+font-size: 50px;
+margin-bottom: 20px;
+}
+
+.gallery-text {
+max-width: 600px;
+margin: 0 auto 50px;
+color: #d8d8e5;
+}
+
+.video-grid {
+display: grid;
+
+```
+grid-template-columns:
+    repeat(auto-fit, minmax(300px, 1fr));
+
+gap: 35px;
+
+max-width: 1300px;
+margin: auto;
+```
+
+}
+
+.video-card {
+padding: 15px;
+
+```
+background: rgba(255, 255, 255, 0.05);
+
+border-radius: 18px;
+```
+
+}
+
+.video-card video {
+width: 100%;
+border-radius: 12px;
+}
+
+.video-card p {
+padding: 20px 10px 10px;
+color: #dedee8;
+}
+
+/* ======================================
+BOUTON CONTINUER
+====================================== */
+
+.next-page {
+min-height: 60vh;
+
+```
+display: flex;
+flex-direction: column;
+
+justify-content: center;
+align-items: center;
+
+text-align: center;
+padding: 50px;
+```
+
+}
+
+.next-page p {
+color: #c9c9d6;
+margin-bottom: 10px;
+}
+
+.next-page h2 {
+font-size: 40px;
+}
+
+/* ======================================
+CARTES "OLVIDASTE"
+====================================== */
+
+#forgotten {
+padding: 50px 8%;
+}
+
+.cards-container {
+display: grid;
+
+```
+grid-template-columns:
+    repeat(auto-fit, minmax(220px, 1fr));
+
+gap: 25px;
+
+max-width: 1200px;
+margin: auto;
+```
+
+}
+
+.memory-card {
+height: 250px;
+
+```
+perspective: 1000px;
+
+cursor: pointer;
+```
+
+}
+
+.memory-card .front,
+.memory-card .back {
+width: 100%;
+height: 100%;
+
+```
+display: flex;
+justify-content: center;
+align-items: center;
+
+padding: 25px;
+
+border-radius: 20px;
+
+text-align: center;
+
+backface-visibility: hidden;
+
+transition: transform 0.7s ease;
+
+position: absolute;
+```
+
+}
+
+.memory-card .front {
+background: rgba(255, 255, 255, 0.08);
+font-size: 50px;
+}
+
+.memory-card .back {
+background: rgba(255, 255, 255, 0.14);
+
+```
+transform: rotateY(180deg);
+
+line-height: 1.7;
+```
+
+}
+
+.memory-card {
+position: relative;
+}
+
+.memory-card:hover .front {
+transform: rotateY(180deg);
+}
+
+.memory-card:hover .back {
+transform: rotateY(360deg);
+}
+
+/* ======================================
+DISTANCE
+====================================== */
+
+#distance {
+min-height: 100vh;
+
+```
+display: flex;
+justify-content: center;
+align-items: center;
+
+padding: 100px 25px;
+text-align: center;
+```
+
+}
+
+.distance-content {
+max-width: 800px;
+}
+
+.distance-content .small-text {
+margin: 20px 0;
+color: #d3d3df;
+}
+
+.distance-content h2 {
+font-size: 45px;
+margin: 60px 0 30px;
+}
+
+.distance-content h1 {
+font-size: clamp(40px, 7vw, 75px);
+margin-bottom: 50px;
+}
+
+.distance-message,
+.ending-message {
+color: #dedee8;
+font-size: 17px;
+}
+
+.distance-message strong,
+.ending-message strong {
+color: white;
+font-size: 22px;
+}
+
+/* ======================================
+HAPPINESS JAR
+====================================== */
+
+#jarSection {
+min-height: 100vh;
+
+```
+display: flex;
+justify-content: center;
+align-items: center;
+
+text-align: center;
+padding: 40px;
+```
+
+}
+
+.jar-content {
+max-width: 700px;
+}
+
+.jar-content h1 {
+font-size: clamp(45px, 7vw, 80px);
+margin: 25px 0;
+}
+
+#jar {
+font-size: 120px;
+
+```
+margin: 50px auto 20px;
+
+cursor: pointer;
+
+display: inline-block;
+
+transition: 0.4s ease;
+```
+
+}
+
+#jar:hover {
+transform: scale(1.15) rotate(5deg);
+}
+
+#jarMessage {
+min-height: 50px;
+
+```
+margin-top: 25px;
+
+font-size: 20px;
+color: #f0f0fa;
+```
+
+}
+
+/* ======================================
+CONSTELLATION
+====================================== */
+
+#constellation {
+min-height: 100vh;
+
+```
+padding: 100px 25px;
+
+text-align: center;
+```
+
+}
+
+.constellation-content {
+max-width: 1000px;
+margin: auto;
+}
+
+.constellation-content h1 {
+font-size: clamp(60px, 10vw, 120px);
+margin: 30px 0;
+}
+
+.constellation-content h2 {
+font-size: 45px;
+margin: 50px 0 25px;
+}
+
+.constellation-content p {
+margin: 15px 0;
+color: #d8d8e5;
+}
+
+.constellation-content .highlight {
+font-size: 35px;
+}
+
+.sky-container {
+display: flex;
+
+```
+justify-content: center;
+align-items: center;
+
+gap: 30px;
+
+margin: 80px auto;
+
+max-width: 900px;
+```
+
+}
+
+.country {
+min-width: 180px;
+}
+
+.country h3 {
+font-size: 25px;
+}
+
+.star {
+font-size: 65px;
+
+```
+margin-top: 20px;
+
+animation: pulse 2s infinite;
+```
+
+}
+
+.connection-line {
+color: rgba(255, 255, 255, 0.5);
+letter-spacing: 8px;
+}
+
+.constellation-message {
+max-width: 650px;
+margin: auto;
+}
+
+/* ======================================
+LETTRE
+====================================== */
+
+#secretLetter {
+min-height: 100vh;
+
+```
+display: flex;
+justify-content: center;
+align-items: center;
+
+padding: 60px 25px;
+```
+
+}
+
+.letter-box {
+max-width: 700px;
+
+```
+padding: 60px 45px;
+
+text-align: center;
+
+background: rgba(255, 255, 255, 0.05);
+
+border: 1px solid rgba(255, 255, 255, 0.12);
+
+border-radius: 25px;
+
+backdrop-filter: blur(10px);
+```
+
+}
+
+.letter-box h1 {
+font-size: 70px;
+margin: 20px 0 35px;
+}
+
+.letter-box h2 {
+font-size: 45px;
+margin: 35px 0;
+}
+
+.letter-box p {
+margin: 20px 0;
+color: #dedee8;
+}
+
+#hugMessage {
+font-size: 60px;
+margin-top: 25px;
+}
+
+/* ======================================
+FINAL
+====================================== */
+
+#ending {
+min-height: 100vh;
+
+```
+display: flex;
+justify-content: center;
+align-items: center;
+
+text-align: center;
+
+padding: 80px 25px;
+```
+
+}
+
+.ending-content {
+max-width: 800px;
+}
+
+.ending-content h1 {
+font-size: clamp(60px, 10vw, 120px);
+margin: 25px 0;
+}
+
+.ending-content h2 {
+font-size: 40px;
+margin: 35px 0;
+}
+
+.ending-content h3 {
+font-size: 60px;
+margin: 30px 0;
+}
+
+.ending-content p {
+color: #dedee8;
+margin: 20px 0;
+}
+
+.final-stars {
+font-size: 45px;
+margin: 50px 0;
+}
+
+.final-message {
+font-size: 20px;
+}
+
+/* ======================================
+FOOTER
+====================================== */
+
+footer {
+padding: 30px;
+text-align: center;
+color: #aaaabb;
+}
+
+/* ======================================
+ANIMATIONS
+====================================== */
+
+@keyframes fadeIn {
+
+```
+from {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+```
+
+}
+
+@keyframes pulse {
+
+```
+0% {
+    transform: scale(1);
+    opacity: 0.7;
+}
+
+50% {
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+100% {
+    transform: scale(1);
+    opacity: 0.7;
+}
+```
+
+}
+
+/* ======================================
+RESPONSIVE
+====================================== */
+
+@media (max-width: 700px) {
+
+```
+.welcome-card {
+    padding: 30px 20px;
+}
+
+.sky-container {
+    flex-direction: column;
+}
+
+.connection-line {
+    transform: rotate(90deg);
+}
+
+.letter-box {
+    padding: 40px 20px;
+}
+```
+
+}
+
+
+/* ======================================
+   ANIMATIONS DES PHOTOS ET VIDÉOS
+====================================== */
+
+.photo-card,
+.video-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.photo-card.visible,
+.video-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ======================================
+   CARTES "LAS COSAS QUE OLVIDASTE"
+====================================== */
+
+.memory-card {
+    position: relative;
+
+    height: 250px;
+
+    perspective: 1000px;
+
+    cursor: pointer;
+}
+
+.memory-card .front,
+.memory-card .back {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    backface-visibility: hidden;
+
+    transition: transform 0.7s ease;
+}
+
+.memory-card .front {
+    background: rgba(255, 255, 255, 0.08);
+
+    font-size: 50px;
+}
+
+.memory-card .back {
+    background: rgba(255, 255, 255, 0.14);
+
+    transform: rotateY(180deg);
+
+    line-height: 1.7;
+}
+
+.memory-card:hover .front {
+    transform: rotateY(180deg);
+}
+
+.memory-card:hover .back {
+    transform: rotateY(360deg);
+}
+
+
+/* ======================================
+   ÉTOILES FILANTES ✨
+====================================== */
+
+#shootingStars {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    pointer-events: none;
+
+    z-index: 999;
+}
+
+.shooting-star {
+    position: absolute;
+
+    width: 4px;
+    height: 120px;
+
+    background: white;
+
+    border-radius: 50%;
+
+    transform: rotate(45deg);
+
+    box-shadow: 0 0 15px white;
+
+    animation: shooting 2s linear forwards;
+}
+
+@keyframes shooting {
+
+    0% {
+        transform: translate(0, 0) rotate(45deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-500px, 500px) rotate(45deg);
+        opacity: 0;
+    }
+
+}
+
+/* ======================================
+   BOUTON MUSIQUE 🎵
+====================================== */
+
+#musicButton {
+    position: fixed;
+
+    top: 25px;
+    right: 25px;
+
+    width: 55px;
+    height: 55px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    background: rgba(255, 255, 255, 0.08);
+
+    color: white;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    z-index: 1000;
+
+    transition: 0.4s ease;
+}
+
+#musicButton:hover {
+    transform: scale(1.15);
+
+    background: rgba(255, 255, 255, 0.2);
+
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+}
+
+#musicButton.playing {
+    animation: musicPulse 1.5s infinite;
+}
+
+@keyframes musicPulse {
+
+    0% {
+        box-shadow: 0 0 0 rgba(255, 255, 255, 0.4);
+    }
+
+    50% {
+        box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
+    }
+
+    100% {
+        box-shadow: 0 0 0 rgba(255, 255, 255, 0.4);
+    }
+
+}
+
+/* ======================================
+   TRANSITION ENTRE LES PAGES 🌌
+====================================== */
+
+#pageTransition {
+    position: fixed;
+
+    inset: 0;
+
+    background: #060816;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    z-index: 9999;
+
+    transition: opacity 0.8s ease;
+}
+
+#pageTransition.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* ======================================
+   ENTRER DANS L'UNIVERS ✨
+====================================== */
+
+#intro {
+    transition: opacity 1s ease,
+                transform 1s ease;
+}
+
+#intro.hidden {
+
+    opacity: 0;
+
+    transform: scale(1.1);
+
+    pointer-events: none;
+
+}
+
+/* ======================================
+   WELCOME FADE OUT ✨
+====================================== */
+
+#welcome {
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
+}
+
+#welcome.hidden {
+
+    opacity: 0;
+
+    transform: translateY(-40px);
+
+    pointer-events: none;
+
+}
